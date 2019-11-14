@@ -185,14 +185,14 @@ set(PERL_CMD ${PERL_EXECUTABLE})
 ### Add Subdirectories #################################################################################################
 
 ### Metrohash ##########################################################
-set(XGL_METROHASH_PATH ${PROJECT_SOURCE_DIR}/../third_party/metrohash CACHE PATH "The path of metrohash.")
+set(XGL_METROHASH_PATH ${PROJECT_SOURCE_DIR}/../MetroHash CACHE PATH "The path of metrohash.")
 
 if(EXISTS ${XGL_METROHASH_PATH} AND NOT TARGET metrohash)
     add_subdirectory(${XGL_METROHASH_PATH} ${PROJECT_BINARY_DIR}/metrohash)
 endif()
 
 ### cwpack #############################################################
-set(XGL_CWPACK_PATH ${PROJECT_SOURCE_DIR}/../third_party/cwpack CACHE PATH "The path of cwpack.")
+set(XGL_CWPACK_PATH ${PROJECT_SOURCE_DIR}/../CWPpack CACHE PATH "The path of cwpack.")
 
 if(EXISTS ${XGL_CWPACK_PATH} AND NOT TARGET cwpack)
     add_subdirectory(${XGL_CWPACK_PATH} ${PROJECT_BINARY_DIR}/cwpack)
@@ -246,4 +246,3 @@ option(BUILD_WSA "Build wsa" OFF)
 if (BUILD_WSA)
     add_subdirectory(${PROJECT_SOURCE_DIR}/../wsa ${PROJECT_BINARY_DIR}/wsa)
 endif()
-
